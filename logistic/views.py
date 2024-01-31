@@ -18,3 +18,7 @@ class StockViewSet(ModelViewSet):
     serializer_class = StockSerializer
     filter_backends = [DjangoFilterBackend]
     filterset_fields = ['address', 'products']
+
+@api_view(['GET'])
+def sample_view(request):
+    return Response({'Hello world!'})
